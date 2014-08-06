@@ -67,7 +67,8 @@ public class ForecastFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        FetchWeatherTask weatherTask = new FetchWeatherTask();
+        weatherTask.execute("94043");
         ArrayList<String> forecasts = new ArrayList<String>();
         forecastAdapter = new ArrayAdapter<String>(getActivity(),
                 R.layout.list_item_forecast,
